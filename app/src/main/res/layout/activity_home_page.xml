@@ -26,14 +26,36 @@
 
     <Button
         android:id="@+id/idAboutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:background="#FFC107"
+        android:layout_width="213dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="84dp"
+        android:background="#FFFFFF"
         android:text="About"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonMovies"
+        android:layout_width="219dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="36dp"
+        android:text="Movies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idAboutButton" />
+
+    <Button
+        android:id="@+id/buttonHelp"
+        android:layout_width="217dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="28dp"
+        android:text="HELP AND SUPPORT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMovies" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
