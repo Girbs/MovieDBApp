@@ -1,5 +1,7 @@
 package com.wgu.moviedbapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,7 @@ public class UpdateMovie extends AppCompatActivity {
     EditText title_input, author_input, year_input, category_input, languages_input;
     Button update_button;
     String id, author, year, category, languages, title;
+    Button delete_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class UpdateMovie extends AppCompatActivity {
         category_input = findViewById(R.id.idCategory1);
         languages_input = findViewById(R.id.idLanguage1);
         update_button = findViewById(R.id.update_movie);
+        delete_button = findViewById(R.id.idDelete);
 
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +38,14 @@ public class UpdateMovie extends AppCompatActivity {
                         year_input.getText().toString().trim(),
                         category_input.getText().toString().trim(),
                         languages_input.getText().toString().trim());
+                startActivity(new Intent(UpdateMovie.this, ListOfMovies.class));
+            }
+        });
+        delete_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MovieDBHelper mdh = new MovieDBHelper(UpdateMovie.this);
+                mdh.deleteOneRow(id);
                 startActivity(new Intent(UpdateMovie.this, ListOfMovies.class));
             }
         });

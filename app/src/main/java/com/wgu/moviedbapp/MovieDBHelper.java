@@ -91,4 +91,15 @@ public class MovieDBHelper extends SQLiteOpenHelper {
             Toast.makeText(context, title + " Movie update successfully", Toast.LENGTH_SHORT).show();
         }
     }
+
+    void deleteOneRow(String row_id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete(TABLE_NAME, "_id=?", new String[]{row_id});
+        if (result == -1) {
+            Toast.makeText(context, "Failed to deleted", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Record deleted successfullty", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
+
