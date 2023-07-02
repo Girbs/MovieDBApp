@@ -60,6 +60,7 @@ public class MovieDBHelper extends SQLiteOpenHelper {
             Toast.makeText(context, "Inssertion failed", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(context, "Movie " + title + " inserted successfully", Toast.LENGTH_SHORT).show();
+
         }
     }
 
@@ -71,5 +72,23 @@ public class MovieDBHelper extends SQLiteOpenHelper {
             cursor = db.rawQuery(query, null);
         }
         return cursor;
+    }
+
+    void updateData(String row_id, String title, String author, String year, String category, String languages) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(COLUMN_TITLE, title);
+        cv.put(COLUMN_AUTHOR, author);
+        cv.put(COLUMN_YEAR, year);
+        cv.put(COLUMN_CATEGORY, category);
+        cv.put(COLUMN_LANGUAGE, languages);
+
+        long result = db.update(TABLE_NAME, cv, "_id=?", new String[]{row_id});
+
+        if (result == -1) {
+            Toast.makeText(context, "update failed", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, title + " Movie update successfully", Toast.LENGTH_SHORT).show();
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.wgu.moviedbapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,9 +32,10 @@ public class CreateMovie extends AppCompatActivity {
                 movieDBHelper.addMovie(
                         title_input.getText().toString().trim(),
                         author_input.getText().toString().trim(),
-                        author_input.getText().toString().trim(),
+                        year_input.getText().toString().trim(),
                         category_input.getText().toString().trim(),
                         languages_input.getText().toString().trim());
+                startActivity(new Intent(CreateMovie.this, ListOfMovies.class));
             }
         });
     }

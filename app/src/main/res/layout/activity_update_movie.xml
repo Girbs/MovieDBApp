@@ -7,88 +7,94 @@
     tools:context=".CreateMovie">
 
     <EditText
-        android:id="@+id/idTitle"
+        android:id="@+id/idTitle1"
         android:layout_width="272dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Title"
+        android:hint="@string/title"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createMoviePageTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/updateMoviePageTitle" />
 
 
     <EditText
-        android:id="@+id/idAuthor"
+        android:id="@+id/idAuthor1"
         android:layout_width="272dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginTop="52dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="Author"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/idTitle1" />
 
     <EditText
-        android:id="@+id/idYear"
+        android:id="@+id/idYear1"
         android:layout_width="272dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginTop="52dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="Year"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idAuthor" />
+        app:layout_constraintTop_toBottomOf="@+id/idAuthor1" />
 
     <EditText
-        android:id="@+id/idCategory"
+        android:id="@+id/idCategory1"
         android:layout_width="272dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginTop="52dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="Category"
         android:inputType="textPersonName"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idYear" />
+        app:layout_constraintTop_toBottomOf="@+id/idYear1" />
 
     <EditText
-        android:id="@+id/idLanguage"
+        android:id="@+id/idLanguage1"
         android:layout_width="272dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginTop="52dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="Language"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idCategory" />
+        app:layout_constraintTop_toBottomOf="@+id/idCategory1" />
 
     <Button
-        android:id="@+id/create_movie"
+        android:id="@+id/update_movie"
         android:layout_width="343dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="42dp"
-        android:text="Save movie"
+        android:text="SAVE CHANGES"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idLanguage" />
+        app:layout_constraintTop_toBottomOf="@+id/idLanguage1" />
 
     <TextView
-        android:id="@+id/createMoviePageTitle"
+        android:id="@+id/updateMoviePageTitle"
         android:layout_width="255dp"
         android:layout_height="44dp"
         android:layout_marginTop="56dp"
-        android:text="Create movie"
+        android:text="Update Movie"
         android:textAlignment="center"
         android:textColor="#1229AA"
         android:textSize="24sp"
