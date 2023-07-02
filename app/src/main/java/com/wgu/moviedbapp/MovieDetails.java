@@ -1,8 +1,8 @@
 package com.wgu.moviedbapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MovieDetails extends AppCompatActivity {
 
