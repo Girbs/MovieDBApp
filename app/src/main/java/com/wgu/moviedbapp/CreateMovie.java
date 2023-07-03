@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,14 +29,19 @@ public class CreateMovie extends AppCompatActivity {
         save_movie_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MovieDBHelper movieDBHelper = new MovieDBHelper(CreateMovie.this);
-                movieDBHelper.addMovie(
-                        title_input.getText().toString().trim(),
-                        author_input.getText().toString().trim(),
-                        year_input.getText().toString().trim(),
-                        category_input.getText().toString().trim(),
-                        languages_input.getText().toString().trim());
-                startActivity(new Intent(CreateMovie.this, ListOfMovies.class));
+                if (title_input.getText().toString().length() == 0 || author_input.getText().toString().length() == 0) {
+                    Toast.makeText(CreateMovie.this, "The Title and the Author can not be empty", Toast.LENGTH_SHORT).show();
+                } else {
+                    MovieDBHelper movieDBHelper = new MovieDBHelper(CreateMovie.this);
+                    movieDBHelper.addMovie(
+                            title_input.getText().toString().trim(),
+                            author_input.getText().toString().trim(),
+                            year_input.getText().toString().trim(),
+                            category_input.getText().toString().trim(),
+                            languages_input.getText().toString().trim());
+                    startActivity(new Intent(CreateMovie.this, ListOfMovies.class));
+                }
+
             }
         });
     }
